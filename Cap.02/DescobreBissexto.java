@@ -10,9 +10,10 @@ public class DescobreBissexto {
         ano = entradaInt.nextInt();
 
         if(ano % 400 == 0){
-            if(ano % 4 == 0 && ano % 100 != 0){
-                System.out.println("Ano bissexto!");
-            }
+            System.out.println("Ano bissexto!");
+        }
+        else if(ano % 4 == 0 && ano % 100 != 0){
+            System.out.println("Ano bissexto!");
         } else {
             System.out.println("Não bissexto!");
         }
