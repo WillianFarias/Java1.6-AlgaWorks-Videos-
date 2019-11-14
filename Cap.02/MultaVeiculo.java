@@ -25,7 +25,7 @@ public class MultaVeiculo{
         System.out.print("Velocidade do veículo: ");
         velocidadeVeiculo = valor.nextInt();
 
-        //Poderia usar swtich tbm!
+        //Não pode ser Swtich pq o mesmo só trabalha com inteiros, ou oq pode ser convertido pra inteiro
 
         if(tipo.equals("caminhão")){
             if(velocidadeVeiculo > (velocidadeMaxima + (velocidadeMaxima*0.05))){
