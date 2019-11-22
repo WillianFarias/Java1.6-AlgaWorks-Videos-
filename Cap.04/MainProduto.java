@@ -15,7 +15,9 @@ public class MainProduto {
 
         for(int i = 0; i < estoque.produtos.length; i++){
 
-            System.out.println(estoque.produtos[i]);
+            estoque.produtos[i] = new Produto();
+
+            //System.out.println(estoque.produtos[i]);
 
             System.out.print("Descrição do produto: ");
             estoque.produtos[i].setDescricao(entradaTexto.nextLine());
@@ -26,7 +28,7 @@ public class MainProduto {
         }
 
         
-        //estoque.listarProdutos();
+            estoque.listarProdutos();
         
     }
 }
