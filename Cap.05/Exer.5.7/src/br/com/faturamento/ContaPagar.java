@@ -6,14 +6,16 @@ public class ContaPagar {
 	private double valor = 0.0;
 	private String dataVencimento = "12/12/12";
 	private Fornecedor fornecedor = new Fornecedor();
+	private SituacaoConta situacaoConta;
 
 	// Construtores
 	ContaPagar() {
-
+		this.situacaoConta = SituacaoConta.PENDENTE;
 	}
 
 	ContaPagar(Fornecedor fornecedor, String descricao, double valor, String dataVencimento) {
-
+		//Invocando construtor padrão
+		this();
 		this.descricao = descricao;
 		this.valor = valor;
 		this.dataVencimento = dataVencimento;
@@ -22,8 +24,12 @@ public class ContaPagar {
 
 	// Métodos
 	void pagar() {
+		if(this.situacaoConta.equals("PENDENTE")) {
 		System.out.println("*****Informações pagamento*****\nDescrição: " + this.descricao + "\nValor: " + this.valor
 				+ "\nData vencimento: " + this.dataVencimento + "\nFornecedor: " + fornecedor.getNome() + "\n");
+		} else {
+			System.out.println("Conta CANCELADA ou PAGA");
+		}
 
 	}
 
@@ -58,5 +64,11 @@ public class ContaPagar {
 	public void setFornecedor(Fornecedor fornecedor) {
 		this.fornecedor = fornecedor;
 	}
+
+	public SituacaoConta getSituacaoConta() {
+		return situacaoConta;
+	}
+	
+	
 
 }
