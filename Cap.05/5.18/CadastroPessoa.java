@@ -5,6 +5,6 @@ public class CadastroPessoa{
     }
     
     private void armazenar(String nome, int idade){
-        System.out.println("Salvando " + nome + "de idade " + idade);
+        System.out.println("Salvando " + nome + " de " + idade + " anos de idade");
     }
 }
