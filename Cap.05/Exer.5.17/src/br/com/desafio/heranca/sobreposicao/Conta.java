@@ -1,6 +1,6 @@
-package br.com.faturamento;
+package br.com.desafio.heranca.sobreposicao;
 
-public class ContaPagar {
+public class Conta {
 
 	private String descricao = "";
 	private double valor = 0.0;
@@ -9,14 +9,14 @@ public class ContaPagar {
 	private SituacaoConta situacaoConta;
 
 	// Construtores
-	ContaPagar() {
+	Conta() {
 		this.situacaoConta = SituacaoConta.PENDENTE;
 	}
 
-	ContaPagar(Fornecedor fornecedor, String descricao, double valor, String dataVencimento) {
+	Conta(Fornecedor fornecedor, String descricao, double valor, String dataVencimento) {
 		// Invocando construtor padrão
 		this();
-		
+
 		this.descricao = descricao;
 		this.valor = valor;
 		this.dataVencimento = dataVencimento;
@@ -43,6 +43,8 @@ public class ContaPagar {
 			System.out.println("Conta CANCELADA ou PAGA");
 		}
 	}
+	
+	//GETTER AND SET
 
 	public String getDescricao() {
 		return descricao;
@@ -78,6 +80,10 @@ public class ContaPagar {
 
 	public SituacaoConta getSituacaoConta() {
 		return situacaoConta;
+	}
+
+	public void setSituacaoConta(SituacaoConta situacaoConta) {
+		this.situacaoConta = situacaoConta;
 	}
 
 }

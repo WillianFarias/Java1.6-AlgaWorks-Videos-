@@ -16,13 +16,19 @@ public class Principal {
 		conta1.setValor(1230d);
 		conta1.setDataVencimento("10/05/2012");
 		conta1.setFornecedor(imobiliaria);
+		
+		System.out.println(conta1.getSituacaoConta());
 
 		ContaPagar conta2 = new ContaPagar(mercado, "Compras do mês", 390d, "19/05/2012");
 		ContaPagar conta3 = new ContaPagar(mercado, "Aluguel da filial", 700d, "11/05/2012");
+		//conta3.situacaoConta = SituacaoConta.PAGA;
 		
 		conta1.pagar();
 		conta2.pagar();
 		conta3.pagar();
+		
+		conta1.pagar();
+		conta2.pagar();
 
 	}
 
