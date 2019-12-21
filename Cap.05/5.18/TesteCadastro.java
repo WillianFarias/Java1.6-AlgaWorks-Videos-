@@ -9,5 +9,7 @@ public class TesteCadastro{
         //pessoa.setNome("Willian");
 
         cadastro.cadastrar(pessoa);
+
+        cadastro.cadastrar("Willian", 26);
     }
 }
