@@ -1,6 +1,6 @@
 package br.com.desafio.heranca.sobreposicao;
 
-public class Pessoa {
+public abstract class Pessoa {
 
 	protected String nome;
 

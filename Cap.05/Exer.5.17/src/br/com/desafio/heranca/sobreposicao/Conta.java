@@ -1,6 +1,6 @@
 package br.com.desafio.heranca.sobreposicao;
 
-public class Conta {
+public abstract class Conta {
 
 	private String descricao = "";
 	private double valor = 0.0;
