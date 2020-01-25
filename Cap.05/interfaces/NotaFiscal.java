@@ -1,4 +1,5 @@
 //No caso de interfaces usa-se a palavra implements
+//Pode-se implementar mais de uma interface
 public class NotaFiscal implements Imprimivel {
   
   @Override
@@ -9,5 +10,5 @@ public class NotaFiscal implements Imprimivel {
   public void soNotaFiscal() {
     System.out.println("Só nota fiscal");
   }
-  
+
 }
