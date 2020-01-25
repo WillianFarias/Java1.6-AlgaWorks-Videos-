@@ -9,7 +9,12 @@ public class ContaReceber extends Conta {
 	}
 
 	public ContaReceber(Cliente cliente, String descricao, Double valor, String dataVencimento) {
-
+		
+		this.descricao = descricao;
+		this.valor = valor;
+		this.dataVencimento = dataVencimento;
+		this.cliente = cliente;
+		
 	}
 
 	public void receber() {
@@ -23,6 +28,12 @@ public class ContaReceber extends Conta {
 		} else {
 			System.out.println("Conta CANCELADA ou PAGA");
 		}
+	}
+
+	@Override
+	public void exibirDetalhes() {
+		// TODO Auto-generated method stub
+		System.out.println("Descrição: " + getDescricao());
 	}
 
 	// GETTERS AND SETTERS

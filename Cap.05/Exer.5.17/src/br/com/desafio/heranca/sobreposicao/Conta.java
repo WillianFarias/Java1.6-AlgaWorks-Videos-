@@ -1,14 +1,16 @@
 package br.com.desafio.heranca.sobreposicao;
 
+//Classes abstratas não necessariamente tem apenas metodos abstratos, pois todos metodos que são declarados
+//como abstratos devem ser implementados nas classes que herdam as classes abstratas
 public abstract class Conta {
 
-	private String descricao = "";
-	private double valor = 0.0;
-	private String dataVencimento = "12/12/12";
-	private Fornecedor fornecedor = new Fornecedor();
+	protected String descricao = "";
+	protected double valor = 0.0;
+	protected String dataVencimento = "12/12/12";
+	protected Fornecedor fornecedor = new Fornecedor();
 	private SituacaoConta situacaoConta;
 
-	// Construtores
+	// Construtor padrao
 	Conta() {
 		this.situacaoConta = SituacaoConta.PENDENTE;
 	}
@@ -43,8 +45,11 @@ public abstract class Conta {
 			System.out.println("Conta CANCELADA ou PAGA");
 		}
 	}
-	
-	//GETTER AND SET
+
+	// Metodo responsavel por exibir detalhes das contas
+	public abstract void exibirDetalhes();
+
+	// GETTER AND SET
 
 	public String getDescricao() {
 		return descricao;

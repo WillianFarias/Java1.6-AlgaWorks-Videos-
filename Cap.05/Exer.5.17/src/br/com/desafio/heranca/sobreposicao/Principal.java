@@ -22,6 +22,7 @@ public class Principal {
 		contaPagar1.setValor(1230d);
 		contaPagar1.setDataVencimento("10/05/2012");
 		contaPagar1.setFornecedor(imobiliaria);
+		
 		ContaPagar contaPagar2 = new ContaPagar(mercado, "Compras do mês", 390d, "19/05/2012");
 
 		// instanciando contas a receber
@@ -30,8 +31,8 @@ public class Principal {
 		contaReceber1.setValor(89500d);
 		contaReceber1.setDataVencimento("23/05/2012");
 		contaReceber1.setCliente(atacadista);
-		ContaReceber contaReceber2 = new ContaReceber(telecom, "Manutenção em sistema de conta online", 320d,
-				"13/05/2012");
+		
+		ContaReceber contaReceber2 = new ContaReceber(telecom, "Manutenção em sistema de conta online", 320d, "13/05/2012");
 
 		// pagamento e cancelamento de contas a pagar
 		contaPagar1.pagar();
@@ -40,6 +41,12 @@ public class Principal {
 		// recebimento e cancelamento de contas a receber
 		contaReceber1.receber();
 		contaReceber2.cancelar();
+		
+		System.out.println("\nRelatório\n");
+		// exibe listagem de todas as contas com detalhamento
+		RelatorioContas relatorio = new RelatorioContas();
+		Conta[] contas = new Conta[]{contaPagar1, contaPagar2, contaReceber1, contaReceber2};
+		relatorio.exibirListagem(contas);
 
 	}
 
