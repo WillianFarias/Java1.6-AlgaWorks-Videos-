@@ -5,41 +5,54 @@ import static java.lang.Math.ceil;
 
 public class Sorteio {
 
-  //private int quantidade = 0;
+  private int vet [] = new int [6];
 
   public void jogo (int numero) {
 
     if (numero > 0){
 
-      int vet [] = new int[5];
+      int x = 0;
 
-      for (int i = 0; i < numero; i ++){
-        for(int j = 0; j < 6; j ++){
+      do {
+
+        for(int i = 0; i < vet.length; i++){//linha
 
           double valor = random() * 60;
-          int x =  (int) ceil(valor);
+          int y =  (int) ceil(valor);
 
-          vet[j] = x;
+          if(!this.jaSaiu(y) && y != 0){
+            vet[i] = y;
+          } else {
+            i--;
+          }
 
         }
-        //System.out.println(vet[i]);
+
+        for(int numeroSorteado : vet){
+          System.out.print(numeroSorteado + " ");
+        }
+
+        System.out.println("");
+
+        x ++;
+
+      }while(x < numero);
+
+      } else {
+        System.out.println("Valor inválido");
       }
+    } 
 
-      //System.out.println(x);
+    private boolean jaSaiu(int numero){
+      boolean resultado = false;
 
-    } else {
-      System.out.println("Valor inválido");
+      for(int i = 0; i < this.vet.length; i++){
+        if(this.vet[i] == numero){
+          resultado = true;
+          break;
+        }
+      }
+      return resultado;
     }
 
-  }
-
-  //Métodos Get e Set
-  /*
-  public int getQuantidade(){
-    return this.quantidade;
-  }
-
-  public void setQuantidade(int quantidade){
-    this.quantidade = quantidade;
-    */
   }
