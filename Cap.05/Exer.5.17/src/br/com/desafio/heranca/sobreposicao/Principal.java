@@ -35,7 +35,14 @@ public class Principal {
 		ContaReceber contaReceber2 = new ContaReceber(telecom, "Manutenção em sistema de conta online", 320d, "13/05/2012");
 
 		// pagamento e cancelamento de contas a pagar
-		contaPagar1.pagar();
+		contaPagar1.cancelar();
+		
+		try {
+			contaPagar1.pagar();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
 		contaPagar2.cancelar();
 
 		// recebimento e cancelamento de contas a receber

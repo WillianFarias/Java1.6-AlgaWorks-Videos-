@@ -26,14 +26,14 @@ public abstract class Conta {
 	}
 
 	// Métodos
-	void pagar() {
+	void pagar() throws OperacaoContaException {
 		if (this.situacaoConta.ordinal() == 0) {
 			System.out.println("*****Informações pagamento*****\nDescrição: " + this.descricao + "\nValor: "
 					+ this.valor + "\nData vencimento: " + this.dataVencimento + "\nFornecedor: " + fornecedor.getNome()
 					+ "\n");
 			this.situacaoConta = SituacaoConta.PAGA;
 		} else {
-			System.out.println("Conta CANCELADA ou PAGA");
+			throw new OperacaoContaException("Conta CANCELADA ou PAGA EXCEPTION");
 		}
 
 	}
