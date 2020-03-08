@@ -25,5 +25,14 @@ public class TesteListArrayList {
     Aluno, portanto esta lista aceitara apenas Aluno nela
     List<Aluno> x = new ArrayList<Aluno>();
     */
+
+    imprimirAlunos(alunos);
+
+  }
+
+  public static void imprimirAlunos(List<Aluno> alunos) {
+    for (Aluno a : alunos){
+      System.out.println(a.getNome());
+    }
   }
 }
