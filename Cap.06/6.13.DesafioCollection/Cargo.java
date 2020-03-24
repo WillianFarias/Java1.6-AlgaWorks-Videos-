@@ -6,18 +6,18 @@ import java.math.BigDecimal ;
     private BigDecimal salario;
     
     public String getDescricao() {
-      return this .descricao;
+      return this.descricao;
     }
 
     public void setDescricao(String descricao) {
-      this .descricao = descricao;
+      this.descricao = descricao;
     }
 
     public BigDecimal getSalario() {
-      return this .salario;
+      return this.salario;
     }
 
     public void setSalario(BigDecimal salario) {
-      this .salario = salario;
+      this.salario = salario;
     }
 }
