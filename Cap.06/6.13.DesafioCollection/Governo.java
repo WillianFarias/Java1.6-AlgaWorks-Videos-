@@ -54,12 +54,13 @@ import java.math.BigDecimal ;
     BigDecimal valor = new BigDecimal(0);
 
     List<Politico> politicos = this.partidosPoliticos.get(partidoPolitico);
-    //politicos.forEach(politico -> politico.getCargo().getSalario().doubleValue());
+    //politicos.forEach(politico -> System.out.println(politico));
+
     for(Politico politico : politicos) {
 
       valor = (politico.getCargo().getSalario());
       valorGasto = valorGasto.add(valor);
-      //valorGasto.add
+      
     }
 
     return valorGasto;
@@ -70,7 +71,20 @@ import java.math.BigDecimal ;
   // implementar busca dos políticos para o partido e cargo informados
   // e cálculo dos salários
 
-    BigDecimal bigdecimal = new BigDecimal(0);
-    return bigdecimal;
+    BigDecimal valorGasto = new BigDecimal(0);
+    BigDecimal valor = new BigDecimal(0);
+
+    List<Politico> politicos = this.partidosPoliticos.get(partidoPolitico);
+    
+    //politicos.forEach(politico -> politico.getCargo().getSalario().doubleValue());
+    for(Politico politico : politicos) {
+
+      if(politico.getCargo().getDescricao().equals(cargo.getDescricao())){
+
+        valor = (politico.getCargo().getSalario());
+        valorGasto = valorGasto.add(valor);
+      }
+    }
+      return valorGasto;
   }
 }
